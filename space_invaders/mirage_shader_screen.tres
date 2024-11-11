@@ -1,0 +1,33 @@
+[gd_resource type="CanvasItemShaderGraph" format=1]
+
+[resource]
+
+_code = {
+"fragment": "vec3 nd1sl3=vec3(SCREEN_UV,0);
+float nd3sl0=nd1sl3.x;
+float nd3sl1=nd1sl3.y;
+float nd3sl2=nd1sl3.z;
+uniform float frequency=60;
+float nd6sl0=frequency;
+float nd5sl0=nd3sl1*nd6sl0;
+float nd8sl0=TIME;
+float nd7sl0=nd5sl0+nd8sl0;
+float nd4sl0=sin(nd7sl0);
+uniform float depth=0.005;
+float nd10sl0=depth;
+float nd9sl0=nd4sl0*nd10sl0;
+float nd12sl0=nd3sl0+nd9sl0;
+vec3 nd11sl0=vec3(nd12sl0,nd3sl1,nd3sl2);
+vec3 nd2sl0=texscreen(nd11sl0.xy);
+COLOR.rgb=nd2sl0;
+",
+"fragment_ofs": 0,
+"light": "",
+"light_ofs": 0,
+"vertex": "",
+"vertex_ofs": 0
+}
+_data = {
+"shaders": [ [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ], [ 0, 33, Vector2( 1478, 6 ), null, null, [ 0, 2, 0 ], 1, 0, Vector2( 74, 34 ), null, null, [  ], 2, 6, Vector2( 1229.58, 1.89666 ), null, [ 0, 0 ], [ 0, 11, 0, 2147483647, 0, null ], 3, 18, Vector2( 263.2, 3 ), null, null, [ 0, 1, 3, 2147483647, 0, null ], 4, 14, Vector2( 711, 45.6 ), 0, null, [ 0, 7, 0, 2147483647, 0, null ], 5, 7, Vector2( 427.2, 90.6 ), 2, null, [ 0, 3, 1, 1, 6, 0, 2147483647, 0, null, 2147483647, 1, null ], 6, 26, Vector2( 279, 187 ), "frequency", 60.0, [  ], 7, 7, Vector2( 579.8, -1.6 ), 0, null, [ 0, 5, 0, 1, 8, 0, 2147483647, 0, null, 2147483647, 1, null ], 8, 5, Vector2( 470, 237 ), null, null, [  ], 9, 7, Vector2( 845, 48 ), 2, null, [ 0, 4, 0, 1, 10, 0, 2147483647, 0, null, 2147483647, 1, null ], 10, 26, Vector2( 632, 186 ), "depth", 0.005, [  ], 11, 19, Vector2( 1085.63, 98 ), null, null, [ 0, 12, 0, 1, 3, 1, 2, 3, 2, 2147483647, 0, null, 2147483647, 1, null, 2147483647, 2, null ], 12, 7, Vector2( 981.632, -16 ), 0, null, [ 0, 3, 0, 1, 9, 0, 2147483647, 0, null, 2147483647, 1, null ] ], [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ] ]
+}
+
